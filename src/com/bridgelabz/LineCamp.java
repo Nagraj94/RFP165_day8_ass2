@@ -9,6 +9,7 @@ public class LineCamp {
         int lengthLine1;
         int lengthLine2;
         System.out.println("welcome to line computation ");
+        System.out.println("  ");
         Scanner sc = new Scanner(System.in);
         System.out.print("enter value for 'x': ");
         x = sc.nextInt();
@@ -32,15 +33,24 @@ public class LineCamp {
         int c = (x3-x2);
         int d = (y3-y2);
 
+        System.out.println("*************************************");
         lengthLine1 = (int) Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
         System.out.println("length of line one is: "+lengthLine1);
 
         lengthLine2 = (int) Math.sqrt(Math.pow(c,2)+Math.pow(d,2));
         System.out.println("length of line one is: "+lengthLine2);
-
+        System.out.println("*************************************");
+        //equals method
         if (Objects.equals(lengthLine1,lengthLine2))
-            System.out.println(lengthLine1+" line is equal "+ lengthLine2);
+            System.out.println("length of line 1 is equal length line 2");
         else
-            System.out.println(lengthLine1+" line is not equal "+ lengthLine2);
+            System.out.println("length of line 1 is not equal length line 2");
+        System.out.println("*************************************");
+        // compare to method
+        int compare = Integer.compare(lengthLine1,lengthLine2);
+        if(compare==0)
+            System.out.println("length of line 1 is greater than length of line 2 ");
+        else
+            System.out.println("length of line 2 is greater than length of line 1 ");
     }
 }
